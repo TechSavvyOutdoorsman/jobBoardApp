@@ -1,0 +1,25 @@
+.form-container { 
+    min-width: 100%;
+    height: 100vh;
+    margin: 0vw;
+    padding: 5vw;
+    position: relative;
+}
+
+.input-field { 
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    max-height: 1.5rem;
+    margin: 1rem;
+    justify-content: space-between;
+
+}
+
+label { 
+    display: block;
+    text-align: center;
+    font-size: var(--fs-sm);
+    margin: 0 0 2vh 0;
+}
+

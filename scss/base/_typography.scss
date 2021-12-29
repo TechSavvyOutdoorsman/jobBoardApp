@@ -1,0 +1,55 @@
+body {
+  font-family: $primary-font;
+  margin: 0;
+  padding: 0;
+}
+
+
+body,
+h1,
+h2,
+h3 {
+  font-family: $primary-font;
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: var(--fs-lg);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: var(--fs-md);
+  font-weight: 600;
+}
+
+h4 {
+  font-size: var(--fs-md);
+  font-weight: 500;
+}
+
+p { 
+  font-size: var(--fs-sm);
+  font-weight: 300;
+  font-family: $secondary-font;
+}
+
+ul { 
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-family: $primary-font;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+}
