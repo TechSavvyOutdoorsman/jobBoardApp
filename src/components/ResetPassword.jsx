@@ -6,6 +6,8 @@ import '../../scss/main.scss'
 
 Userfront.init('demo1234')
 
+Userfront.sendResetLink('viewer@example.com')
+
 // const LoginForm = Userfront.build({
 //     toolId: 'alnkkd'
 // })
@@ -16,7 +18,6 @@ class Login extends Component {
     constructor(props) { 
         super(props)
         this.state={
-            email: '',
             password: '',
             passwordVerify: '',
             alertMessage: ''
@@ -49,9 +50,7 @@ class Login extends Component {
             return this.setAlertMessage('Passwords must match')
         } 
         // Call Userfront.signup()
-        Userfront.signup({
-            method: 'password',
-            email: this.state.email,
+        Userfront.resetPassword({
             password: this.state.password
 
         }) .catch((error) => {
@@ -93,23 +92,9 @@ style={{ maxWidth: '400px'}}
             <Form 
             onSubmit={this.handleSubmit}
             >
-                <Form.Group
-                controlId="formBasicEmail"
-                >
-                    <Form.Label>
-                        Email Address
-                        </Form.Label>
-                    <Form.Control
-                    placeholder="name@example.com"
-                    type='email'
-                    onChange={this.handleInputChange}
-                    defaultValue={this.state.email}
-                    >
-                    </Form.Control>
-                </Form.Group>
+                
                 <Form.Group
                 controlId="formBasicPassword"
-                className='mt-3'
                 >
                     <Form.Label>
                         Password
@@ -122,21 +107,31 @@ style={{ maxWidth: '400px'}}
                     >
                     </Form.Control>
                 </Form.Group>
-                
-                <Button style={{ width: '100%'}} className='mt-4 btn btn-primary' type='submit'>Login</Button>
-                <p
+                <Form.Group
+                controlId="formBasicPasswordVerify"
                 className='mt-3'
+                >
+                    <Form.Label>
+                        Confirm Password
+                    </Form.Label>
+                    <Form.Control
+                    placeholder="password1234"
+                    type='password'
+                    onChange={this.handleInputChange}
+                    defaultValue={this.state.passwordVerify}
+                    >
+                    </Form.Control>
+                </Form.Group>
+                
+                <Button style={{ width: '100%'}} className='mt-4 btn btn-primary' type='submit'>Reset Password</Button>
+
+                {/* <p
+                className='mt-2'
                 >Don't have an account? Click
                 <Link
                 to='/signup'
-                style={{ fontSize: 'medium', textTransform: 'lowercase', paddingLeft: '.5rem'}}>here.</Link>
-                </p>
-                <p
-                >Forgot your password? Click
-                <Link
-                to='/resetpassword'
-                style={{ fontSize: 'medium', textTransform: 'lowercase', paddingLeft: '.5rem'}}>here.</Link>
-                </p>
+                style={{ fontSize: 'medium', textTransform: 'lowercase', paddingLeft: '.5rem'}}>Here.</Link>
+                </p> */}
             </Form>
         </Container>
 </Container>
