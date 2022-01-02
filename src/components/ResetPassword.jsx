@@ -13,8 +13,6 @@ Userfront.sendResetLink('viewer@example.com')
 // })
 
 class Login extends Component { 
-
-
     constructor(props) { 
         super(props)
         this.state={
@@ -66,29 +64,23 @@ class Login extends Component {
             this.setState({ alertMessage: message })
     }
 
-
     render () {
         return (
 
 
-<div className="bg bg-white">
 
-<div 
-className="wrapper" 
-style={{ height: '100vh', width: '100vw'}}
-> 
-    <div 
-    className="flex-center center" 
-    style={{maxWidth: '400px'}}
-    > 
-
-<Container 
-fluid="sm"
-style={{ maxWidth: '400px'}}
+<div className="bg bg-white d-flex justify-content-center align-items-center"
+style={{width: '100vw', height: '100vh'}}
 >
-        {/* <Alert message={this.props.alertMessage} /> */}
 
-        <Container className="flex bg-ul" style={{ borderRadius: '10px'}}>
+
+    <div className=" justify-content-center align-content-center d-flex "
+    >
+
+        <div
+        style={{ maxWidth: '400px', height: '100%'}}
+        >
+            <Container className="bg-ul" style={{ borderRadius: '10px' }}>
             <Form 
             onSubmit={this.handleSubmit}
             >
@@ -134,7 +126,7 @@ style={{ maxWidth: '400px'}}
                 </p> */}
             </Form>
         </Container>
-</Container>
+
 </div>
 </div>
 </div>

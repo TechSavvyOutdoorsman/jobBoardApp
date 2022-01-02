@@ -61,95 +61,86 @@ class Signup extends Component {
     }
 
     // Handle the alert message so it displays on our Alert component
-
     setAlertMessage(message) {
-        
             this.setState({ alertMessage: message })
     }
 
-
     render () {
-
         return (
+                <div className="bg bg-white d-flex justify-content-center align-items-center"
+                style={{width: '100vw', height: '100vh'}}
+                >
 
-                <div className="bg bg-white">
+                            <div className=" justify-content-center align-content-center d-flex "
+                            >
 
-                    <div 
-                    className="wrapper" 
-                    style={{ height: '100vh', width: '100vw'}}
-                    > 
-                        <div 
-                        className="flex-center center" 
-                        style={{maxWidth: '400px'}}
-                        > 
-
-                    <Container 
-                    fluid="sm"
-                    style={{ maxWidth: '400px'}}
-                    >
-                            {/* <Alert message={this.props.alertMessage} /> */}
-
-                            <Container className="flex bg-ul" style={{ borderRadius: '10px'}}>
-                                <Form 
-                                onSubmit={this.handleSubmit}
+                                <div
+                                style={{ maxWidth: '400px', height: '100%'}}
                                 >
-                                    <Form.Group
-                                    controlId="formBasicEmail"
-                                    >
-                                        <Form.Label>
-                                            Email Address
-                                            </Form.Label>
-                                        <Form.Control
-                                        placeholder="name@example.com"
-                                        type='email'
-                                        onChange={this.handleInputChange}
-                                        defaultValue={this.state.email}
+                                    <Container className="bg-ul" style={{ borderRadius: '10px' }}>
+                                    {/* <Alert message={this.props.alertMessage} /> */}
+                                        <Form
+                                        onSubmit={this.handleSubmit}
                                         >
-                                        </Form.Control>
-                                    </Form.Group>
-                                    <Form.Group
-                                    controlId="formBasicPassword"
-                                    className='mt-3'
-                                    >
-                                        <Form.Label>
-                                            Password
-                                        </Form.Label>
-                                        <Form.Control
-                                        placeholder="password1234"
-                                        type='password'
-                                        onChange={this.handleInputChange}
-                                        defaultValue={this.state.password}
-                                        >
-                                        </Form.Control>
-                                    </Form.Group>
-                                    <Form.Group
-                                    controlId="formBasicPasswordVerify"
-                                    className='mt-3'
-                                    >
-                                        <Form.Label>
-                                            Confirm Password
-                                        </Form.Label>
-                                        <Form.Control
-                                        placeholder="password1234"
-                                        type='password'
-                                        onChange={this.handleInputChange}
-                                        defaultValue={this.state.passwordVerify}
-                                        >
-                                        </Form.Control>
-                                    </Form.Group>
-                                    <Button style={{ width: '100%', }} className='mt-3 btn btn-primary' type='submit'>Sign Up</Button>
-                                    <p
-                                    className='mt-2'
-                                    >Already have an account? click
-                                    <Link
-                                    to='/login'
-                                    style={{ fontSize: 'medium', paddingLeft: '.5rem', textTransform: 'lowercase'}}>Here.</Link>
-                                    </p>
-                                </Form>
-                            </Container>
-                    </Container>
-        </div>
-    </div>
+                                            <Form.Group
+                                            controlId="formBasicEmail"
+                                            >
+                                                <Form.Label>
+                                                    Email Address
+                                                    </Form.Label>
+                                                <Form.Control
+                                                placeholder="name@example.com"
+                                                type='email'
+                                                onChange={this.handleInputChange}
+                                                defaultValue={this.state.email}
+                                                >
+                                                </Form.Control>
+                                            </Form.Group>
+                                            <Form.Group
+                                            controlId="formBasicPassword"
+                                            className='mt-3'
+                                            >
+                                                <Form.Label>
+                                                    Password
+                                                </Form.Label>
+                                                <Form.Control
+                                                placeholder="password1234"
+                                                type='password'
+                                                onChange={this.handleInputChange}
+                                                defaultValue={this.state.password}
+                                                >
+                                                </Form.Control>
+                                            </Form.Group>
+                                            <Form.Group
+                                            controlId="formBasicPasswordVerify"
+                                            className='mt-3'
+                                            >
+                                                <Form.Label>
+                                                    Confirm Password
+                                                </Form.Label>
+                                                <Form.Control
+                                                placeholder="password1234"
+                                                type='password'
+                                                onChange={this.handleInputChange}
+                                                defaultValue={this.state.passwordVerify}
+                                                >
+                                                </Form.Control>
+                                            </Form.Group>
+                                            <Button style={{ width: '100%', }} className='mt-3 btn btn-primary' type='submit'>Sign Up</Button>
+                                            <p
+                                            className='mt-2'
+                                            >Already have an account? click
+                                            <Link
+                                            to='/login'
+                                            style={{ fontSize: 'medium', paddingLeft: '.5rem', textTransform: 'lowercase'}}>Here.</Link>
+                                            </p>
+                                        </Form>
+                                    </Container>
+                                </div>
+                            </div>
+
+
+
 </div>
 
         )

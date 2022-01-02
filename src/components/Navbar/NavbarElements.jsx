@@ -23,6 +23,7 @@ export const NavLogoLink = styled(Link)`
     text-decoration: none;
     flex-direction: column;
     margin-left: 1.5rem;
+    margin-top: .5rem;
     height: 100%;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
