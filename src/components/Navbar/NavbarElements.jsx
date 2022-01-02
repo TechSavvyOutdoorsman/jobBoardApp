@@ -116,14 +116,32 @@ export const NavBtnLink = styled(Link)`
     }
 `
 export const NavBtnLinkTwo = styled(Link)`
+border-radius: 3px;
+background: turquoise;
+padding: 12px 22px;
+margin-left: 1rem;
+color: #000;
+border: none;
+ouline: none;
+cursor: pointer;
+transition: all 0.2s ease-in-out;
+text-decoration: none;
+font-weight: 700;
+font-family: 'Comfortaa', sans-serif;
+&:hover {
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+}
+`
+export const NavBtnLinkThree = styled(Link)`
     border-radius: 3px;
-    background: turquoise;
+    background: blue;
     padding: 12px 22px;
-    margin-left: 1rem;
     color: #000;
     border: none;
     ouline: none;
     cursor: pointer;
+    margin-left: 1rem;
     transition: all 0.2s ease-in-out;
     text-decoration: none;
     font-weight: 700;

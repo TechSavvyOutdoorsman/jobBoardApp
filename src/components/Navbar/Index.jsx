@@ -1,7 +1,11 @@
 import React from 'react'
-import { Nav, NavLogoLink, Bars, NavMenu, NavLink, NavBtn, NavBtnLink, NavBtnLinkTwo } from './NavbarElements'
+import { Nav, NavLogoLink, Bars, NavBtn } from './NavbarElements'
+import { NavLink as Link } from 'react-router-dom'
+import { HiLogin } from 'react-icons/hi'
 
-function Navbar() {
+
+
+function Navbar({ isAuth }) {
     return (
         <>
             <Nav>   
@@ -15,8 +19,13 @@ function Navbar() {
                         </NavLink>   
                 </NavMenu> */}
                 <NavBtn>
-                    <NavBtnLink to='/login'>Login</NavBtnLink>
-                    <NavBtnLinkTwo to='/signup'>Sign Up</NavBtnLinkTwo>
+                    {!isAuth ? <Link className='btn btn-primary' to='/login'><HiLogin /> Log in</Link>
+                    : <Button className="btn btn-outline-primary">Log Out</Button>
+                    }
+                    {/* <NavBtnLink to='/login'>Login</NavBtnLink>  */}
+                    {/* <NavBtnLinkTwo to='/signup'>Sign Up</NavBtnLinkTwo>         */}
+                    {/* <NavBtnLinkThree >Log Out</NavBtnLinkThree>  */}
+        
                 </NavBtn>
             </Nav>
         </>

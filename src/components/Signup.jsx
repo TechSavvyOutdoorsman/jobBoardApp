@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom'
 import '../../scss/main.scss'
 
 
-function Login({ setIsAuth }) { 
+function Signup({ setIsAuth }) { 
 
     let navigate = useNavigate()
 
@@ -36,4 +36,4 @@ function Login({ setIsAuth }) {
 }
 
 
-export default Login
+export default Signup
