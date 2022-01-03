@@ -41,7 +41,7 @@ export default function CreateJobPost({ isAuth }) {
             <Form>
                 <Form.Group>
                     <Form.Label>Job Title:</Form.Label>
-                    <Form.Control type="text" placeholder="ex: Paralegal" onChange={(event) => {setTitle(event.target.value)}}></Form.Control>
+                    <Form.Control type="text" placeholder="ex: Paralegal" onChange={(e) => {setTitle(e.target.value)}}></Form.Control>
                     <Form.Text className='text-muted'>Try to be as specific as possible</Form.Text>
                     
                 </Form.Group >
@@ -54,22 +54,6 @@ export default function CreateJobPost({ isAuth }) {
                 </Form.Group>
             </Form>
         </div>
-
-
-        // <div className='createPostPage'>
-        //     <div className="cpContainer">
-        //         <h1 className="primary">Create a Post</h1>
-        //         <div className="input-group">
-        //             <label>Job Title:</label>
-        //             <input type="text" placeholder="ex: Paralegal"/>
-        //         </div>
-        //         <div className="input-group">
-        //             <label>Job Description:</label>
-        //             <textarea name="job-description" id="job-descriptions" cols="30" rows="10" placeholder="Job Description..."></textarea>
-        //         </div>
-        //         <Button className="btn btn-primary">Create New Job Post</Button>
-        //     </div>
-        // </div>
     )
 }
 

@@ -1,3 +1,16 @@
 @import '../abstracts/variables';
 // Backgrounds
 
+.jobContainer {
+    margin: 1rem;
+    border: 2px solid $primary-color--200;
+    border-radius: 10px;
+    width: 100%;
+
+    .jobPosting { 
+        max-height: 100%;
+        width: 100%;
+        padding: 1rem;
+    
+    }
+}
