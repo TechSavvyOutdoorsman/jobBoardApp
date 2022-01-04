@@ -54,7 +54,7 @@ function Home({ isAuth })  {
                                     <div className="post-author"><h5>{post.createdBy}</h5></div>
                                     <div className="post-description"><p>{post.postText}</p></div>
                                     <div className="delete-post">
-                                        {isAuth && post.author.id === auth.currentUser.uid &&
+                                    {isAuth && post.author.id === auth.currentUser.uid &&
                                         <>
                                         <Button className="btn btn-info m-1">Edit Post</Button>
                                         <Button className="btn btn-danger" onClick={() => {deletePost(post.id)}}>Delete Post</Button>

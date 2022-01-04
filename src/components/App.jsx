@@ -1,4 +1,4 @@
-// import Signup from './Signup'
+import Signup from './Signup'
 import Home from '../pages'
 import Login from './Login'
 import CreateJobPost from './CreateJobPost'
@@ -25,16 +25,27 @@ function App() {
     })
   }
 
+  const navigateToSignUp = () => {
+    window.location.pathname = '/signup'
+  }
+  const navigateToLogin = () => {
+    window.location.pathname = '/login'
+  }
+
   return (
 
     <Router>
       <nav>
         <Link to='/'>Home</Link>
-       {!isAuth ? <Link to='/login'>Log In</Link> 
+       {!isAuth ? 
+       <div className='justify- align-items-center '>
+       <Button variant='outline-info' onClick={navigateToLogin}>Log In</Button>
+       <Button variant='primary' onClick={navigateToSignUp}>Sign Up</Button>
+       </div>
       : (
         <>
         <Link to='/createjobpost'>Create Post</Link>
-        <Button onClick={signUserOut} className='btn btn-primary-outline'>Log Out</Button>
+        <Button onClick={signUserOut} variant='primary-outline'>Log Out</Button>
         </>
       )}
       </nav>
@@ -46,7 +57,7 @@ function App() {
           <Route path='/' exact element={<Home isAuth={isAuth} />} />
           <Route path='/login' exact element={<Login setIsAuth={setIsAuth} />} /> 
           <Route path='/createjobpost' exact element={<CreateJobPost isAuth={isAuth} />} /> 
-          {/* <Route path='/signup' exact element={<Signup setIsAuth={setIsAuth} />} /> */}
+          <Route path='/signup' exact element={<Signup />} />
           {/* <Route path='/resetpassword' exact element={<ResetPassword />} /> */}
         </Routes>
     </Router>
